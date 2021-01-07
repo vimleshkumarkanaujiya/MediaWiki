@@ -19,8 +19,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = 'Pageversity';
-$wgMetaNamespace = "Pageversity";
+$wgSitename = 'yoursitename';
+$wgMetaNamespace = "yournamespace";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -30,7 +30,7 @@ $wgMetaNamespace = "Pageversity";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://pageversity.com";
+$wgServer = "https://yoursite.com";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -42,16 +42,14 @@ $wgLogos =[
 	'width' => 135,
 	'height' => 20,
 	'svg' => "$wgResourceBasePath/resources/assets/wiki.svg"];
-	
-	$wgMFheaderImageAllPages = ['svg' => "$wgResourceBasePath/resources/assets/pageversity-wiki.svg"];
 
 ## UPO means: this is also a user preference option
 
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = 'kanaujiyavimleshkumar@gmail.com';
-$wgPasswordSender = 'kanaujiyavimleshkumar@gmail.com';
+$wgEmergencyContact = 'example@yoursite.com';
+$wgPasswordSender = 'example@yoursite.com';
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
@@ -60,9 +58,9 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "127.0.0.1";
-$wgDBname = "u220168244_Yu4Z9";
-$wgDBuser = "u220168244_mqj0S";
-$wgDBpassword = "XCrKdhoOGA";
+$wgDBname = "yourDBname";
+$wgDBuser = "yourusername";         ##See DataBase for these details.
+$wgDBpassword = "yourpassword";
 
 # MySQL specific settings
 $wgDBprefix = "xsii_";
@@ -108,7 +106,7 @@ $wgShellLocale = "en_US.utf8";
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = 'en';
 
-$wgSecretKey = "5c5286e013a6739a026f0f11de7cfc66d4e23be97df0c6a3252419f9649243c8";
+$wgSecretKey = "yourUniqueSecretKey";           ##This is auto-generated, Do not make changes here. MediaWiki generates for you.
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -152,7 +150,7 @@ $wgGroupPermissions['user']['writeapi'] = true;
 #Google Analytics.
 require_once "$IP/extensions/googleAnalytics/googleAnalytics.php";
 // Replace xxxxxxx-x with YOUR GoogleAnalytics UA number
-$wgGoogleAnalyticsAccount = 'UA-170814882-1';
+$wgGoogleAnalyticsAccount = 'Your_ID';
 #Additional extentions.
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
@@ -170,8 +168,6 @@ wfLoadExtension( 'TemplateSandbox' );
 wfLoadExtension( 'HAWelcome' );
 wfLoadExtension( 'AddHTMLMetaAndTitle' );
 $wgArticlePath = '/wiki/$1';
-wfLoadExtension( 'TinyMCE' );
-$wgTinyMCEEnabled = false;
 wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'WikiEditor' );
 
